@@ -1,0 +1,92 @@
+China	CHN
+South Korea	KOR
+Colombia	COL
+Brazil	BRA
+Australia	AUS
+Peru	PER
+Madagascar	MDG
+Germany	DEU
+India	IND
+Mexico	MEX
+France	FRA
+French Guiana	GUF
+Ecuador	ECU
+Tanzania	TZA
+Russia	RUS
+Algeria	DZA
+Morocco	MAR
+South Africa	ZAF
+Venezuela	VEN
+Poland	POL
+Kyrgyzstan	KGZ
+Japan	JPN
+Israel	ISR
+Ethiopia	ETH
+Chile	CHL
+Canada	CAN
+Argentina	ARG
+Viet Nam	VNM
+United Kingdom	GBR
+Turkey	TUR
+Thailand	THA
+Tajikistan	TJK
+Pakistan	PAK
+Kenya	KEN
+Italy	ITA
+Iran	IRN
+Georgia	GEO
+Czech Republic	CZE
+Bolivia	BOL
+Spain	ESP
+Kazakhstan	KAZ
+Costa Rica	CRI
+Brunei	BRN
+Taiwan	TWN
+Portugal	PRT
+Greece	GRC
+Gabon	GAB
+Denmark	DNK
+Cyprus	CYP
+Austria	AUT
+Zambia	ZMB
+Uruguay	URY
+Switzerland	CHE
+Saudi Arabia	SAU
+Papua New Guinea	PNG
+Malaysia	MYS
+Guatemala	GTM
+Cuba	CUB
+Chad	TCD
+Cameroon	CMR
+Burkina Faso	BFA
+Zimbabwe	ZWE
+Zaire	COD
+USSR	RUS
+Uganda	UGA
+Syria	SYR
+Sierra Leone	SLE
+Senegal	SEN
+Romania	ROU
+Reunion	REU
+Puerto Rico	PRI
+Philippines	PHL
+Niger	NER
+New Zealand	NZL
+Netherlands	NLD
+Nepal	NPL
+Namibia	NAM
+Mongolia	MNG
+Mali	MLI
+Hungary	HUN
+Honduras	HND
+Falkland Islands (Islas Malvinas)	FLK
+Egypt	EGY
+Dominican Republic	DOM
+Djibouti	DJI
+Democratic Republic of the Congo	COD
+Central African Republic	CAF
+Bulgaria	BGR
+Botswana	BWA
+Belarus	BLR
+Armenia	ARM
+USA	USA
