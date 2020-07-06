@@ -9,8 +9,8 @@ Data has to be provided in format "Counts Country". One country per line.
 
 Example: 
 
-$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt
+$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -o example/map.html
 
 Use option -l/--log_scale to convert counts to log scale
 
-$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -l
+$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -l -o example/map_log.html
