@@ -105,11 +105,12 @@ def main(args):
         map_data["genome_count"] = counts_log
     # Create map
     fig = px.choropleth(map_data, locations="iso_alpha", color="genome_count", hover_name=map_data.index, color_continuous_scale=px.colors.sequential.Plasma)
-    fig.show()
+    fig.write_html(args.output)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="  --  ".join([__author__, __copyright__, __info__, __version__]))
     parser.add_argument("-i", "--input", type=str, required=True, help="path to input file")
+    parser.add_argument("-o", "--output", type=str, required=True, help="path to output html file")
     parser.add_argument("-t", "--translate", type=str, required=True, help="path to country code translation file")
     parser.add_argument("-l", "--log_scale", action="store_true", required=False, default=False, help="Use log scale on counts.")
     args = parser.parse_args()
