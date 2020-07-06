@@ -8,7 +8,9 @@ The script offers a primitive translation functionality. If an unknown country n
 Data has to be provided in format "Counts Country". One country per line.
 
 Example: 
+
 $ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt
 
-Use option -l/--log_scale to convert counts to log scale (
+Use option -l/--log_scale to convert counts to log scale
+
 $ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -l
