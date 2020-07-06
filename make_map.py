@@ -42,11 +42,17 @@ def translate_countries(country_counts, fp_translate):
     correction = False
     for key in country_counts:
         if key in trans_dict:
-            cc_trans[trans_dict[key]] = int(country_counts[key])
+            if trans_dict[key] in cc_trans:
+                cc_trans[trans_dict[key]] += int(country_counts[key])
+            else:
+                cc_trans[trans_dict[key]] = int(country_counts[key])
         else:
             correct_code = get_country_code(key)
             trans_dict[key] = correct_code
-            cc_trans[trans_dict[key]] = int(country_counts[key])
+            if trans_dict[key] in cc_trans:
+                cc_trans[trans_dict[key]] += int(country_counts[key])
+            else:
+                cc_trans[trans_dict[key]] = int(country_counts[key])
 
     write_translate_dict(fp_translate, trans_dict)
 
