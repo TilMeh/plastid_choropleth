@@ -10,10 +10,16 @@ from iso3166 import countries
 # AUTHOR INFO #
 ###############
 __author__ = 'Michael Gruenstaeudl <m.gruenstaeudl@fu-berlin.de>, '\
-			 'Tilman Mehl <tilmanmehl@zedat.fu-berlin.de>'
+             'Tilman Mehl <tilmanmehl@zedat.fu-berlin.de>'
 __copyright__ = 'Copyright (C) 2020 Michael Gruenstaeudl and Tilman Mehl'
 __info__ = 'Create map of plastid genomes origins per country.'
-__version__ = '2020.07.06.1300'
+__version__ = '2020.07.07.1800'
+
+#############
+# DEBUGGING #
+#############
+import ipdb
+#ipdb.set_trace()
 
 
 # Read translate dictionary
@@ -82,14 +88,14 @@ def get_country_code(country):
     except Exception as err:
         code_ok = False
         corrections = True
-        print("unable to resolve country " + country + "! Please provide the correct ISO-3166-alpha3 code for " + country)
+        print("unable to resolve country `%s`! Please provide the correct ISO-3166-alpha3 code for `%s`" % (country, country))
         while not code_ok:
             country_alpha3 = input()
             try:
                 country_alpha3 = countries.get(country_alpha3).alpha3
                 code_ok = True
             except:
-                print("Invalid ISO-3166-alpha3 code " + country_alpha3 + "! Please provide the correct ISO-3166-alpha3 code for " + country)
+                print("Invalid ISO-3166-alpha3 code `%s`! Please provide the correct ISO-3166-alpha3 code for `%s`" %(country_alpha3, country))
     return country_alpha3
 
 
@@ -104,13 +110,29 @@ def main(args):
         counts_log = [math.log(x) for x in map_data["genome_count"]]
         map_data["genome_count"] = counts_log
     # Create map
-    fig = px.choropleth(map_data, locations="iso_alpha", color="genome_count", hover_name=map_data.index, color_continuous_scale=px.colors.sequential.Plasma)
-    fig.write_html(args.output)
+    fig = px.choropleth(map_data,
+						title='Distribution of sequenced plastid genomes by end of 2019',
+                        locations="iso_alpha",
+                        color="genome_count",
+                        hover_name=map_data.index,
+                        #color_continuous_scale=px.colors.sequential.Plasma
+                        color_continuous_scale=px.colors.sequential.Greys
+                       ) 
+    
+    fig.update_geos(
+		visible=False,
+		showcountries=True,
+		#countrycolor="grey",
+		projection_type="mollweide"
+	)
+	
+    #fig.write_html(args.output)
+    fig.write_image(args.output)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="  --  ".join([__author__, __copyright__, __info__, __version__]))
     parser.add_argument("-i", "--input", type=str, required=True, help="path to input file")
-    parser.add_argument("-o", "--output", type=str, required=True, help="path to output html file")
+    parser.add_argument("-o", "--output", type=str, required=True, help="path to output svg file")
     parser.add_argument("-t", "--translate", type=str, required=True, help="path to country code translation file")
     parser.add_argument("-l", "--log_scale", action="store_true", required=False, default=False, help="Use log scale on counts.")
     args = parser.parse_args()

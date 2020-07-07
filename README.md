@@ -11,12 +11,12 @@ zgrep -ah "/country" *.tar.gz | awk '{$1=$1;print}' | sed 's/\/country=//' | sed
 ## USAGE
 #### Map with summary variable in normal scale
 ```
-$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -o example/map.html
+$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -o example/map.svg
 ```
 
 #### Map with summary variable in log-scale (option `-l/--log_scale`)
 ```
-$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -l -o example/map_log.html
+$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -l -o example/map_log.svg
 ```
 
 ## NOTES
@@ -26,3 +26,10 @@ Concerning input data:
 
 ## LINKS
 Choropleth Maps in Python: [https://plotly.com/python/choropleth-maps/](https://plotly.com/python/choropleth-maps/)
+
+## TO DO
+- DONE - Please change standard output to svg.
+- DONE - Please have all countries not listed in map_data (i.e., countries that have missing values) displayed in pure white. I cannot figure out how to do this in the Python version of plotly.
+- DONE - Please change the projection type to "mollweide".
+- Please add a black outline of the projection (so that we see an oval).
+- Please have the legend in the logscale transformation display relevant info.
