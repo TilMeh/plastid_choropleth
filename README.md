@@ -32,4 +32,4 @@ Choropleth Maps in Python: [https://plotly.com/python/choropleth-maps/](https://
 - DONE - Please have all countries not listed in map_data (i.e., countries that have missing values) displayed in pure white. I cannot figure out how to do this in the Python version of plotly.
 - DONE - Please change the projection type to "mollweide".
 - Please add a black outline of the projection (so that we see an oval).
-- Please have the legend in the logscale transformation display relevant info.
+- How can we adjust the legend of the logscale transformation so that its values can be interpreted easily?
