@@ -22,13 +22,6 @@ import ipdb
 #ipdb.set_trace()
 
 
-# Read translate dictionary
-# Read country counts
-# go through input
-#   translate if possible
-#   manually translate and append
-
-
 def read_country_counts(fp_input):
     with open(fp_input) as fh_input:
         lines = fh_input.readlines()
@@ -98,34 +91,49 @@ def get_country_code(country):
                 print("Invalid ISO-3166-alpha3 code `%s`! Please provide the correct ISO-3166-alpha3 code for `%s`" %(country_alpha3, country))
     return country_alpha3
 
+def assign_categories(cc_trans):
+    cc_categories = {}
+    for k, v in cc_trans.items():
+        if v > 100:
+            cc_categories[k] = ">100"
+        elif v < 100 and v >= 50:
+            cc_categories[k] = "50-100"
+        elif v < 50 and v >= 10:
+            cc_categories[k] = "10-50"
+        elif v < 10 and v >= 1:
+            cc_categories[k] = "1-10"
+
+    return cc_categories
 
 def main(args):
     # Read in raw counts
     country_counts = read_country_counts(args.input)
     # Translate country names to valid ISO-3166-alpha3 codes
     cc_trans = translate_countries(country_counts, args.translate)
+    # Assign categories
+    cc_categories = assign_categories(cc_trans)
     # Convert dict to DataFrame
-    map_data = pd.DataFrame(cc_trans.items(), columns=["iso_alpha", "genome_count"])
-    if args.log_scale:
-        counts_log = [math.log(x) for x in map_data["genome_count"]]
-        map_data["genome_count"] = counts_log
+    #map_data = pd.DataFrame(cc_trans.items(), columns=["iso_alpha", "genome_count"])
+    map_data = pd.DataFrame(cc_categories.items(), columns=["iso_alpha", "category"])
+    cat_order = {"category": ["1-10", "10-50", "50-100", ">100"]}
     # Create map
     fig = px.choropleth(map_data,
 						title='Distribution of sequenced plastid genomes by end of 2019',
                         locations="iso_alpha",
-                        color="genome_count",
+                        color="category",
+                        category_orders=cat_order,
                         hover_name=map_data.index,
                         #color_continuous_scale=px.colors.sequential.Plasma
-                        color_continuous_scale=px.colors.sequential.Greys
-                       ) 
-    
+                        color_discrete_sequence=px.colors.sequential.Greys
+                       )
+
     fig.update_geos(
 		visible=False,
 		showcountries=True,
 		#countrycolor="grey",
 		projection_type="mollweide"
 	)
-	
+
     #fig.write_html(args.output)
     fig.write_image(args.output)
 
@@ -134,6 +142,5 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, required=True, help="path to input file")
     parser.add_argument("-o", "--output", type=str, required=True, help="path to output svg file")
     parser.add_argument("-t", "--translate", type=str, required=True, help="path to country code translation file")
-    parser.add_argument("-l", "--log_scale", action="store_true", required=False, default=False, help="Use log scale on counts.")
     args = parser.parse_args()
     main(args)
