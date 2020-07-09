@@ -13,7 +13,7 @@ __author__ = 'Michael Gruenstaeudl <m.gruenstaeudl@fu-berlin.de>, '\
              'Tilman Mehl <tilmanmehl@zedat.fu-berlin.de>'
 __copyright__ = 'Copyright (C) 2020 Michael Gruenstaeudl and Tilman Mehl'
 __info__ = 'Create map of plastid genomes origins per country.'
-__version__ = '2020.07.07.1800'
+__version__ = '2020.07.09.1045'
 
 #############
 # DEBUGGING #
@@ -114,17 +114,18 @@ def main(args):
     cc_categories = assign_categories(cc_trans)
     # Convert dict to DataFrame
     #map_data = pd.DataFrame(cc_trans.items(), columns=["iso_alpha", "genome_count"])
-    map_data = pd.DataFrame(cc_categories.items(), columns=["iso_alpha", "category"])
-    cat_order = {"category": ["1-10", "10-50", "50-100", ">100"]}
+    map_data = pd.DataFrame(cc_categories.items(), columns=["iso_alpha", "Plastid sequences"])
+    cat_order = {"Plastid sequences": [">100", "50-100", "10-50", "1-10"]}
+    # Built-in grey color scheme doesn't work well here. We can use a fixed list of colors for our 4 categories
+    custom_colors = ['#000000', '#4b4b4b', '#969696', '#c8c8c8']
     # Create map
     fig = px.choropleth(map_data,
 						title='Distribution of sequenced plastid genomes by end of 2019',
                         locations="iso_alpha",
-                        color="category",
+                        color="Plastid sequences",
                         category_orders=cat_order,
                         hover_name=map_data.index,
-                        #color_continuous_scale=px.colors.sequential.Plasma
-                        color_discrete_sequence=px.colors.sequential.Greys
+                        color_discrete_sequence=custom_colors
                        )
 
     fig.update_geos(
