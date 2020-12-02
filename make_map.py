@@ -106,11 +106,18 @@ def assign_categories(cc_trans):
     return cc_categories
 
 def main(args):
+    # STEP 1: Set up logger
+    log = logging.getLogger(__name__)
+    coloredlogs.install(fmt='%(asctime)s [%(levelname)s] %(message)s', level='DEBUG', logger=log)
+
     # Read in raw counts
+    log.debug("Reading counts per country...")
     country_counts = read_country_counts(args.input)
     # Translate country names to valid ISO-3166-alpha3 codes
+    log.debug("Translating country names to country codes...")
     cc_trans = translate_countries(country_counts, args.translate)
     # Assign categories
+    log.debug("Assign counts to categories...")
     cc_categories = assign_categories(cc_trans)
     # Convert dict to DataFrame
     #map_data = pd.DataFrame(cc_trans.items(), columns=["iso_alpha", "genome_count"])
@@ -119,8 +126,10 @@ def main(args):
     # Built-in grey color scheme doesn't work well here. We can use a fixed list of colors for our 4 categories
     custom_colors = ['#000000', '#4b4b4b', '#969696', '#c8c8c8']
     # Create map
+    log.debug("Create map...")
     fig = px.choropleth(map_data,
-						title='Distribution of sequenced plastid genomes by end of 2019',
+						#title='Distribution of sequenced plastid genomes by end of 2019',
+                        title=args.title,
                         locations="iso_alpha",
                         color="Plastid sequences",
                         category_orders=cat_order,
@@ -136,6 +145,7 @@ def main(args):
 	)
 
     #fig.write_html(args.output)
+    log.debug("Writing map to output file...")
     fig.write_image(args.output)
 
 if __name__ == "__main__":
@@ -143,5 +153,6 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, required=True, help="path to input file")
     parser.add_argument("-o", "--output", type=str, required=True, help="path to output svg file")
     parser.add_argument("-t", "--translate", type=str, required=True, help="path to country code translation file")
+    parser.add_argument("--title", type=str, required=False, default="Distribution of sequenced plastid genomes", help="title of the output map")
     args = parser.parse_args()
     main(args)

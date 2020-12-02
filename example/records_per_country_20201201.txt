@@ -1,0 +1,101 @@
+492 China
+123 South Korea
+ 63 USA
+ 51 Brazil
+ 45 Colombia
+ 45 Australia
+ 38 Peru
+ 32 Mexico
+ 30 Germany
+ 29 Madagascar
+ 25 India
+ 22 France
+ 17 Japan
+ 15 Russia
+ 13 French Guiana
+ 12 South Africa
+ 12 Ecuador
+ 11 Thailand
+ 11 Tanzania
+  9 Viet Nam
+  9 Kenya
+  9 Algeria
+  8 Switzerland
+  8 Pakistan
+  8 Morocco
+  8 Kyrgyzstan
+  7 United Kingdom
+  7 Turkey
+  7 Iran
+  7 Canada
+  7 Argentina
+  6 Venezuela
+  6 Tajikistan
+  6 Poland
+  6 Kazakhstan
+  6 Israel
+  6 Georgia
+  6 Czech Republic
+  6 Chile
+  5 Taiwan
+  5 Spain
+  5 Italy
+  5 Gabon
+  5 Ethiopia
+  5 Bolivia
+  4 Costa Rica
+  4 Brunei
+  3 Saudi Arabia
+  3 Portugal
+  3 New Zealand
+  3 Dominican Republic
+  3 Cyprus
+  3 Cameroon
+  3 Austria
+  2 Zambia
+  2 Uzbekistan
+  2 Uruguay
+  2 Senegal
+  2 Papua New Guinea
+  2 Nicaragua
+  2 Malaysia
+  2 Guatemala
+  2 Greece
+  2 Democratic Republic of the Congo
+  2 Cuba
+  2 Chad
+  2 Burkina Faso
+  1 Zimbabwe
+  1 Zaire
+  1 Vanuatu
+  1 Uganda
+  1 Tonga
+  1 Syria
+  1 Sierra Leone
+  1 Romania
+  1 Reunion
+  1 Puerto Rico
+  1 Philippines
+  1 Niger
+  1 New Caledonia
+  1 Netherlands
+  1 Nepal
+  1 Namibia
+  1 Mongolia
+  1 Mauritius
+  1 Mali
+  1 Lebanon
+  1 Indonesia
+  1 Hungary
+  1 Honduras
+  1 Guinea
+  1 Falkland Islands (Islas Malvinas)
+  1 Egypt
+  1 Djibouti
+  1 Denmark
+  1 Central African Republic
+  1 Bulgaria
+  1 Botswana
+  1 Belize
+  1 Belarus
+  1 Armenia

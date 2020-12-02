@@ -90,3 +90,13 @@ Botswana	BWA
 Belarus	BLR
 Armenia	ARM
 USA	USA
+Uzbekistan	UZB
+Nicaragua	NIC
+Vanuatu	VUT
+Tonga	TON
+New Caledonia	NCL
+Mauritius	MUS
+Lebanon	LBN
+Indonesia	IDN
+Guinea	GIN
+Belize	BLZ
