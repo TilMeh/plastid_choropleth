@@ -1,0 +1,123 @@
+   1249 China
+    158 South Korea
+     97 Brazil
+     96 USA
+     89 Australia
+     47 India
+     45 Colombia
+     40 Peru
+     38 Mexico
+     33 Russia
+     32 Germany
+     32 France
+     32 Canada
+     31 Madagascar
+     24 Turkey
+     24 Austria
+     23 Japan
+     20 Czech Republic
+     16 United Kingdom
+     16 South Africa
+     16 New Zealand
+     14 Tanzania
+     14 Spain
+     14 Ecuador
+     13 Switzerland
+     13 French Guiana
+     12 Viet Nam
+     12 Italy
+     12 Georgia
+     10 Thailand
+     10 Kyrgyzstan
+     10 Iran
+     10 Argentina
+      9 Pakistan
+      9 Kenya
+      9 Algeria
+      8 Morocco
+      8 Ethiopia
+      8 Bolivia
+      7 Tajikistan
+      7 Israel
+      7 Gabon
+      6 Venezuela
+      6 Taiwan
+      6 Portugal
+      6 Poland
+      6 Chile
+      5 Sri Lanka
+      5 Kazakhstan
+      5 Greece
+      5 Denmark
+      4 Saudi Arabia
+      4 Cyprus
+      4 Costa Rica
+      4 Brunei
+      3 Uzbekistan
+      3 Tunisia
+      3 Nicaragua
+      3 New Caledonia
+      3 Nepal
+      3 Malaysia
+      3 Dominican Republic
+      3 Cameroon
+      2 Zambia
+      2 Uruguay
+      2 Sweden
+      2 Sierra Leone
+      2 Senegal
+      2 Paraguay
+      2 Papua New Guinea
+      2 Oman
+      2 Iceland
+      2 Guatemala
+      2 Egypt
+      2 Democratic Republic of the Congo
+      2 Cuba
+      2 Chad
+      2 Burkina Faso
+      2 Bulgaria
+      2 Armenia
+      2 Angola
+      1 Zimbabwe
+      1 Zaire
+      1 Yemen
+      1 Vanuatu
+      1 United Arab Emirates
+      1 Uganda
+      1 Tonga
+      1 Syria
+      1 Sudan
+      1 Singapore
+      1 Saint Vincent and the Grenadines
+      1 Romania
+      1 Reunion
+      1 Puerto Rico
+      1 Philippines
+      1 Norway
+      1 Niger
+      1 Netherlands
+      1 Namibia
+      1 Mongolia
+      1 Mauritius
+      1 Mali
+      1 Lebanon
+      1 Ireland
+      1 Indonesia
+      1 Hungary
+      1 Honduras
+      1 Haiti
+      1 Guinea
+      1 Ghana
+      1 Finland
+      1 Falkland Islands (Islas Malvinas)
+      1 Eritrea
+      1 Djibouti
+      1 Central African Republic
+      1 Botswana
+      1 Bermuda
+      1 Belize
+      1 Belgium
+      1 Belarus
+      1 Bahamas
+      1 Azerbaijan

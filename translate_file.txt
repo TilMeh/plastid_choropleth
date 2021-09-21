@@ -100,3 +100,25 @@ Lebanon	LBN
 Indonesia	IDN
 Guinea	GIN
 Belize	BLZ
+Sri Lanka	LKA
+Tunisia	TUN
+Sweden	SWE
+Paraguay	PRY
+Oman	OMN
+Iceland	ISL
+Angola	AGO
+Yemen	YEM
+United Arab Emirates	ARE
+Sudan	SDN
+Singapore	SGP
+Saint Vincent and the Grenadines	VCT
+Norway	NOR
+Ireland	IRL
+Haiti	HTI
+Ghana	GHA
+Finland	FIN
+Eritrea	ERI
+Bermuda	BMU
+Belgium	BEL
+Bahamas	BHS
+Azerbaijan	AZE

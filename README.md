@@ -11,12 +11,12 @@ zgrep -ah "/country" *.tar.gz | awk '{$1=$1;print}' | sed 's/\/country=//' | sed
 ## USAGE
 #### Map with summary variable in normal scale
 ```
-$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -o example/map.svg
+$ python3 make_map.py -i records_per_country.txt -t example/translate_file.txt -o example/map.svg
 ```
 
 #### Map with summary variable in log-scale (option `-l/--log_scale`)
 ```
-$ python3 make_map.py -i example/records_per_country.txt -t example/translate_file.txt -l -o example/map_log.svg
+$ python3 make_map.py -i records_per_country.txt -t example/translate_file.txt -l -o example/map_log.svg
 ```
 
 ## NOTES
